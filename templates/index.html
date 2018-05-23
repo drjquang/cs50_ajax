@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<script>
-			alert('Hello!')
+		<script src="{{ url_for('static', filename='index.js')}}">
 		</script>
-		<title>Pop-up alert</title>
+		<title>Currency Converter</title>
 	</head>
 	<body>
-		Welcome!
+		<form id="form">
+			<input type="text" id="currency" autofocus autocomplete="off" placeholder="Currency abbr">
+			<input type="submit" value="Get Exchange Rate">
+		</form>
+		<br>
+		<div id="result"></div>
 	</body>
 </html>
